@@ -32,8 +32,8 @@ python3 `which scons` tu_dortmund=1 -j 8 EXTRAS=../nvmain ./build/ARM/gem5.fast
 ```
 to enable all features from TU Dortmund.
 
-Currently the following features are supported:
-tu_dortmund: Bit-Flip Trace Writer
+Currently the following features are supported:  
+tu_dortmund: Bit-Flip Trace Writer  
 CDNCcim: TODO
 
 ### Build the simulation
