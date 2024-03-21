@@ -34,7 +34,7 @@ to enable all features from TU Dortmund.
 
 Currently the following features are supported:  
 tu_dortmund: Bit-Flip Trace Writer  
-CDNCcim: TODO
+CDNCcim: Compute in Memory module for NVM technologies
 
 ### Build the simulation
 Before running the simulation (Gem5 + NVMain2.0) it needs to be build with:
