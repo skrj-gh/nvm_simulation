@@ -10,7 +10,7 @@ git submodule update
 This will ensure all required submodule are present and updated.
 
 ## Setup with VS Code and Docker development container
-1.) Get [VS CODE](https://code.visualstudio.com/) and necessary [extensions](https://code.visualstudio.com/docs/remote/remote-overview) for remote container development.
+1.) Get [VS CODE](https://code.visualstudio.com/) and necessary [extensions](https://code.visualstudio.com/docs/remote/remote-overview) for remote container development. Also Docker needs to be installed on your system.
 
 ![alt text](img/extension.gif)
 
