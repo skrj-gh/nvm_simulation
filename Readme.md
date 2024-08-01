@@ -1,13 +1,13 @@
 # NVM Simulation
 This Repository should enable the user to use our Gem5 + NVMain2.0 setup, Unikraft and Benchmark apps to measure/evaluate NVM memory.
 
-## Setup the repository
+<!-- ## Setup the repository
 After cloning the repository, please make sure to execute the following in it:
 ```
 git submodule init
 git submodule update
 ```
-This will ensure all required submodule are present and updated.
+This will ensure all required submodule are present and updated. -->
 
 ## Setup with VS Code and Docker development container
 1.) Get [VS CODE](https://code.visualstudio.com/) and necessary [extensions](https://code.visualstudio.com/docs/remote/remote-overview) for remote container development. Also make sure Docker is installed on your system and that docker commands can be executed by non-root users. We recommend installing docker via [their repository](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository) and also following their [post-installation guide](https://docs.docker.com/engine/install/linux-postinstall/).
