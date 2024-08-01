@@ -11,8 +11,13 @@
 			"VARIANT": "ubuntu-22.04"
 		}
 	},
+	"mounts": [
+		"source=/dev/kvm,target=/dev/kvm,type=bind"
+	],
 	"runArgs": [
-		"--network=host"
+		"--network=host",
+		"--cap-add=IPC_LOCK",
+		"--device=/dev/kvm"
 	],
 	"customizations": {
 		"vscode": {

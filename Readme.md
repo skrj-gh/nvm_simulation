@@ -18,6 +18,13 @@ This will ensure all required submodule are present and updated. -->
 
 ![alt text](img/open.gif)
 
+## Prerequisites on your computer for `CDNC CIM Full-System` simulation part
+
+1- **KVM**-supported cpu: Without this, loading the operating system in gem5 will take significantly longer.
+
+2- Install **KVM** packages:
+- follow instructions on https://help.ubuntu.com/community/KVM/Installation (or a similar guide for your OS distribution)
+
 ## Using the simulation
 The NVMBench.sh script provides you with the most basic tools to setup and use Gem5/NVMain2.0/Unikraft/Benchmarks. Make sure to modify it in order to fit your needs, e.g. to setup the correct memory configuration.
 
