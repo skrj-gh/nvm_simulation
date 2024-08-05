@@ -83,3 +83,63 @@ To run the simulation:
 ```
 
 Results are in: results/APPNAME.d/
+
+
+---
+### CDNC Full System CIM tutorial:
+
+- After opening this repository in *devcontainer* environment, click on `Terminal` tab in vscode, then `Run Task...`, and choose **Run skip-Steps1and2.sh** to download our prebuilt disk image. Wait for the task to finish.
+
+- Next, click on `Terminal` tab in VS Code,, then `Run Task...`, and choose **Run step3-testingWithGem5.sh** to run the simulation with gem5. Confirm start of compilation by pressing **y + enter key** if needed. Wait until you see: 
+
+    > src/dev/ps2/mouse.cc:153: warn: Unknown mouse command 0x0.
+    
+    on your VS Code Terminal.
+
+- Open a new Terminal instance in your VS Code, and type:
+
+    > `./simulator/gem5/util/term/m5term 127.0.0.1 3456`
+
+    to connect to your gem5 OS remote terminal.
+    Now you are simulating your Ubuntu with gem5 :) 
+
+> **gem5 example No.1: Compiling and running a simple **hello world** application inside gem5 Full-System mode**
+
+- You should see `test1.cpp` in your `~/test1/` directory after running the `ls` command.
+Let's compile it with:
+
+    ```sh
+    sudo g++ test1.cpp  /usr/local/lib/libm5.a  -o test1.exe
+    ```
+    **default USER: `ali`, and PASS: `1234`**
+
+- then switch to **timing cpu** with `m5 exit` command, then
+run the compiled code with `./test1.exe`. Run:
+    ```sh
+    m5 exit && ./test1.exe
+    ```
+
+    It will print:
+    ```sh
+    ./test.exe 
+
+        ***	Hello World!	***
+
+    sum result (should be 21): 21
+    m5 which shutdowns gem5...
+    ```
+    and exits the simulation because of `m5_exit(0ul);` line in our code.
+
+> **gem5 example No.2: Compiling and running a simple **Kernel module for direct physical memory access** example inside gem5 and how to access it from a **user-level** application**
+
+Follow the previous steps (Run Task: **Run step3-testingWithGem5.sh** and ...), but this time, 
+- move to `~/test2/` directory and run:
+    ```sh
+    sudo ./compile_and_run.sh
+    ```
+    wait for it to finish.
+
+> For more info, check [./cdnc/README.md](./cdnc/README.md)
+
+
+---
