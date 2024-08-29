@@ -71,11 +71,11 @@ Simulation results will be dumped in the results/APPNAME.d folder.
 The simulation starts detached from the terminal. The gem5 output is located in results/APPNAME.d/gem5.terminal. The unikraft terminal output is located at results/APPNAME.d/m5out/system.terminal
 
 ### TL;DR:
-Execute only once after cloning the repository:
+<!-- Execute only once after cloning the repository:
 ```
 git submodule init
 git submodule update
-```
+``` -->
 
 To run the simulation:
 ```
