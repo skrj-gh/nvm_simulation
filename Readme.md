@@ -37,7 +37,7 @@ to enable compute-in-memory functionality. The ExampleBuild.sh currently enables
 Currently the following features are supported:  
 bitflip: Bit-Flip Trace Writer  
 CDNCcim: Compute in Memory module for NVM technologies
-TODO: Dresden / KIT?
+hybrid_cache: Heterogeneous cache extension
 
 ### TL;DR:
 #### Setup
