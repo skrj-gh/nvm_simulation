@@ -34,7 +34,7 @@ debugBuild() {
     # Both it and gdb require the ptrace, which can only be occupied by one.
     # But --with-asan can still be used for everything in the address sanatizers besides the memory leaks.
     # Both flags --with-ubsan and --with-asan can also be used with the gem5.fast if needed.
-    python3 `which scons` tu_dortmund=1 --without-tcmalloc --with-ubsan --with-asan -j 8 EXTRAS=../nvmain ./build/ARM/gem5.debug
+    python3 `which scons` tu_dortmund=1 --without-tcmalloc -j 8 EXTRAS=../nvmain ./build/ARM/gem5.debug
     cd $ROOT_DIR
 }
 
