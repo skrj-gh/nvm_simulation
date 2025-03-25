@@ -8,7 +8,7 @@
 # toolchain. Please adapt/extend everything to your linking.
 #
 # The current configuration is used by the commands:
-# - NVMain2.0 configuration file: printtrace_tu_dortmund.config
+# - NVMain2.0 configuration file: printtrace_bitflip.config
 # - Application to simulate: Benchmark based on argument (needs to be built first).
 # - System:
 #   - ISA: ARM64
@@ -89,7 +89,7 @@ executionPrep() {
     #Move app binary to directory
     cp $ROOT_DIR/unikraft_setup/apps/$1/build/$1_gem5-arm64.dbg $1_gem5-arm64.dbg
     #Move trace config to directory
-    cp ../../simulator/nvmain/Config/printtrace_tu_dortmund.config printtrace_tu_dortmund.config
+    cp ../../simulator/nvmain/Config/printtrace_bitflip.config printtrace_bitflip.config
     cd $ROOT_DIR
 }
 
@@ -107,7 +107,7 @@ debug() {
     --mem-type=NVMainMemory \
     --bare-metal --disk-image $ROOT_DIR/simulator/fake.iso \
     --kernel=$ROOT_DIR/results/$1.d/$1_gem5-arm64.dbg \
-    --nvmain-config=$ROOT_DIR/results/$1.d/printtrace_tu_dortmund.config \
+    --nvmain-config=$ROOT_DIR/results/$1.d/printtrace_bitflip.config \
     --cpu-type=DerivO3CPU --machine-type=VExpress_GEM5_V2 --caches --l2cache \
     --l1i_size='32kB' --l1d_size='8kB' --l2_size='8kB' --dtb-filename=none \
     --mem-size=4GB
@@ -128,7 +128,7 @@ execute() {
     --mem-type=NVMainMemory \
     --bare-metal --disk-image $ROOT_DIR/simulator/fake.iso \
     --kernel=$ROOT_DIR/results/$1.d/$1_gem5-arm64.dbg \
-    --nvmain-config=$ROOT_DIR/results/$1.d/printtrace_tu_dortmund.config \
+    --nvmain-config=$ROOT_DIR/results/$1.d/printtrace_bitflip.config \
     --cpu-type=DerivO3CPU --machine-type=VExpress_GEM5_V2 --caches --l2cache \
     --l1i_size='32kB' --l1d_size='8kB' --l2_size='8kB' --dtb-filename=none \
     --mem-size=4GB > gem5.terminal &
