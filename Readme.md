@@ -35,7 +35,7 @@ python3 `which scons` CDNCcim=1 -j 8 EXTRAS=../nvmain ./build/ARM/gem5.fast
 to enable compute-in-memory functionality. The ExampleBuild.sh currently enables the feature for bit flip simulation, targeting wear-out analysis.
 
 Currently the following features are supported:  
-tu_dortmund: Bit-Flip Trace Writer  
+bitflip: Bit-Flip Trace Writer  
 CDNCcim: Compute in Memory module for NVM technologies
 TODO: Dresden / KIT?
 
