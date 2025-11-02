@@ -12,5 +12,5 @@
 	branch = stable
 [submodule "NVMain"]
 	path = simulator/nvmain
-	url = https://github.com/OMA-NVM/nv-NVmain.git
+	url = https://github.com/skrj-gh/nv-NVmain.git
 	branch = master
