@@ -82,8 +82,9 @@ echo
 
 # Create a minimal test - just run /bin/true or similar
 # We'll capture the output to check for initialization messages
+# Using custom test config (non-deprecated)
 $GEM5_DIR/build/ARM/gem5.fast \
-    $GEM5_DIR/configs/example/se.py \
+    tests/nvmain_test_config.py \
     --mem-type=NVMainMemory \
     --nvmain-config=$NVMAIN_CONFIG \
     --cpu-type=TimingSimpleCPU \

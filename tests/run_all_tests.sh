@@ -161,11 +161,11 @@ EOF
     echo "Compiling simple memory test..."
     gcc -static -o tests/simple_mem_test tests/simple_mem_test.c
 
-    # Run with gem5
+    # Run with gem5 (using non-deprecated config)
     echo "Running with gem5/NVMain..."
     simulator/gem5/build/ARM/gem5.fast \
         --outdir=m5out/simple_test \
-        simulator/gem5/configs/example/se.py \
+        tests/nvmain_test_config.py \
         --mem-type=NVMainMemory \
         --nvmain-config=simulator/nvmain/Config/ReRAM_DynamicMapping.config \
         --cpu-type=TimingSimpleCPU \
