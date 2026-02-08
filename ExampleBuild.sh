@@ -128,7 +128,7 @@ execute() {
     --mem-type=NVMainMemory \
     --bare-metal --disk-image $ROOT_DIR/simulator/fake.iso \
     --kernel=$ROOT_DIR/results/$1.d/$1_gem5-arm64.dbg \
-    --nvmain-config=$ROOT_DIR/results/$1.d/printtrace_bitflip.config \
+    --nvmain-config=$ROOT_DIR/simulator/nvmain/Config/ReRAM_DynamicMapping.config \
     --cpu-type=DerivO3CPU --machine-type=VExpress_GEM5_V2 --caches --l2cache \
     --l1i_size='32kB' --l1d_size='8kB' --l2_size='8kB' --dtb-filename=none \
     --mem-size=4GB > gem5.terminal &
@@ -177,7 +177,7 @@ case $1 in
     ;;
 
     execute | e)
-        executionPrep $2
+        # executionPrep $2
         execute $2
     ;;
 
