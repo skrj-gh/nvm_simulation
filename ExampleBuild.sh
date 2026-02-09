@@ -122,12 +122,15 @@ debug() {
 execute() {
     echo "Executing $1."
     #Start simulation
-    cd $ROOT_DIR/results/$1.d/
+    cd $ROOT_DIR/results
+    rm -r $1.d
+    mkdir $1.d
+    cd $1.d
     export M5_PATH=.
     nohup $ROOT_DIR/simulator/gem5/build/ARM/gem5.fast $ROOT_DIR/simulator/gem5/configs/deprecated/example/fs.py \
     --mem-type=NVMainMemory \
     --bare-metal --disk-image $ROOT_DIR/simulator/fake.iso \
-    --kernel=$ROOT_DIR/results/$1.d/$1_gem5-arm64.dbg \
+    # --kernel=$ROOT_DIR/results/$1.d/$1_gem5-arm64.dbg \
     --nvmain-config=$ROOT_DIR/simulator/nvmain/Config/ReRAM_DynamicMapping.config \
     --cpu-type=DerivO3CPU --machine-type=VExpress_GEM5_V2 --caches --l2cache \
     --l1i_size='32kB' --l1d_size='8kB' --l2_size='8kB' --dtb-filename=none \
