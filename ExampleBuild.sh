@@ -135,6 +135,7 @@ execute() {
     --nvmain-config=$ROOT_DIR/results/$1.d/ReRAM_DynamicMapping.config  \
     --cpu-type=DerivO3CPU --machine-type=VExpress_GEM5_V2 --caches --l2cache \
     --l1i_size='32kB' --l1d_size='8kB' --l2_size='8kB' --dtb-filename=none \
+    --cmd=$ROOT_DIR/bzip/bzip2/bzip2/bzip2 \
     --mem-size=4GB > gem5.terminal &
     disown $(jobs -p)
     cd $ROOT_DIR
