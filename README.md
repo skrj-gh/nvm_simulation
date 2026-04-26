@@ -1,3 +1,38 @@
+# IMPORTANT
+### This is a development branch, do not use this branch.
+
+# How to:
+
+## Clone and Initialize Repository
+```bash
+git clone https://github.com/skrj-gh/nvm_simulation.git
+```
+
+```bash
+git submodule init
+git submodule update
+```
+
+## For Intrabank migrations (LEADER implementation)
+```bash
+git checkout intra
+cd simulator/nvmain
+git checkout intra
+```
+### Now follow the steps mentioned in `README.md` of intra branch 
+
+
+## For Interbank migration (further work)
+```bash
+git checkout inter
+cd simulator/nvmain
+git checkout inter
+```
+### Now follow the steps mentioned in `README.md` of inter branch
+
+
+## -------------------------------------------------------------------
+
 # NVM Simulation Toolchain (gem5 + NVMain)
 
 This repository integrates **gem5** with **NVMain** to study non-volatile memory behavior, with a focus on **ReRAM dynamic region mapping**.
