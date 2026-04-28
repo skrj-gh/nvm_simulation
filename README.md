@@ -32,7 +32,7 @@ This repository integrates **gem5** with **NVMain** to study non-volatile memory
 Path: Purpose
 `simulator/gem5`: gem5 source (submodule)
 `simulator/nvmain`: NVMain source (submodule)
-`simulator/nvmain/Config`: NVMain configs (`ReRAM_Baseline.config`, `ReRAM_DynamicMapping.config`)
+`simulator/nvmain/Config`: NVMain configs (`ReRAM_DynamicMapping.config`)
 `results`: Runtime output directories for benchmark runs
 
 ## Prerequisites
@@ -215,14 +215,11 @@ $ROOT_DIR/simulator/gem5/configs/deprecated/example/se.py \
 ```
 
 - **Similarly other benchmarks can be run.**
-- **Baseline results can be obtained by using `ReRAM_Baseline.config` instead of `ReRAM_DynamicMapping.config`**
 
 ## Key NVMain configs
 
 - `simulator/nvmain/Config/ReRAM_DynamicMapping.config`
   - Dynamic mapping + migration policy knobs
-- `simulator/nvmain/Config/ReRAM_Baseline.config`
-  - ReRAM architecture with no migration
 
 ## Typical stats to inspect
 
