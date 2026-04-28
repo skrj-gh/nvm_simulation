@@ -7,17 +7,14 @@ This repository integrates **gem5** with **NVMain** to study non-volatile memory
 - Dynamic virtual-to-physical region mapping for ReRAM in NVMain
 - Region scoring and epoch-based migration in the memory controller
 - Fast/slow region latency modeling at bank level
-- Same-rank interbank migration support
 
 ## Current migration scope
 
 **Supported**
 - Intra-bank swaps
-- Inter-bank swaps within the same channel and rank
 
 **Not supported**
-- Cross-rank migration
-- Cross-channel migration
+- Inter-bank migration
 
 ## Address translation model (high-level)
 
@@ -233,7 +230,6 @@ From `gem5.terminal` after simulation:
 - `migrationsPerBank`
 - `totalEnergy`
 - `worstCaseEndurance`
-- (interbank-enabled runs) migration counters for intra/inter activity
 
 ## Notes
 - `results/` is runtime-generated and not part of tracked source artifacts.
